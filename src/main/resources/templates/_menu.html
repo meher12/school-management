@@ -1,0 +1,40 @@
+<div xmlns:th="http://www.thymeleaf.org"
+	style="border: 1px solid #ccc; padding: 5px; margin-bottom: 20px;">
+<!-- th:if="${#authorization.expression('hasRole(''ADMIN'')')}" -->
+<div    class="form-group"  sec:authorize="hasRole('ROLE_ADMIN')" >
+
+	<a th:href="@{/index}">Home</a>
+	 | &nbsp; 
+	<a th:href="@{/indexTeacher}">List Teacher </a> 
+		| &nbsp;
+		 <a th:href="@{/indexStudent}">List Student</a> 
+		 | &nbsp; 
+		<a sec:authorize="isAuthenticated()" th:href="@{/logout}">Logout</a>
+
+</div>
+
+<div   th:if="${#authorization.expression('hasRole(''ACTUATOR'')')}">
+
+		| &nbsp; 
+	<a th:href="@{/indexTeacher}">
+	List Teacher 
+		</a> 
+		| &nbsp;
+		 <a th:href="@{/indexStudent}">List Student</a> 
+		 | &nbsp; 
+		<a sec:authorize="isAuthenticated()" th:href="@{/logout}">Logout</a>
+
+
+</div>
+
+<div  th:if="${#authorization.expression('hasRole(''ROLE_USER'')')}">
+
+		| &nbsp;
+		 <a th:href="@{/indexStudent}">List Student</a> 
+		 | &nbsp; 
+		<a sec:authorize="isAuthenticated()" th:href="@{/logout}">Logout</a>
+
+</div>
+
+
+</div>

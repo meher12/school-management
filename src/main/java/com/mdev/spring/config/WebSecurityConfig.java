@@ -57,11 +57,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		http.headers().frameOptions().sameOrigin().and().authorizeRequests()
 				.antMatchers("/resources/**", "/webjars/**", "/assets/**").permitAll().antMatchers("/").permitAll()
 				// Permissions for Admin Users 
-				.antMatchers("/index/**", "/indexTeacher","/indexStudent").hasRole("ADMIN")
+				//.antMatchers("/index", "/indexTeacher","/indexStudent").hasRole("ADMIN")
 				// Permissions for ACTUATOR Users
-				.antMatchers("/indexTeacher","/indexStudent").hasRole("ACTUATOR")
+				//.antMatchers("/indexTeacher","/indexStudent").hasRole("ACTUATOR")
 				// // Permissions for USER (student) Users
-				.antMatchers("/indexStudent").hasRole("USER")
+				//.antMatchers("/indexStudent").hasRole("USER")
 				.anyRequest()
 				.authenticated().and().formLogin()
 				.loginPage("/login").successHandler(successHandler).permitAll().and().logout()

@@ -6,9 +6,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-<!-- <div sec:authorize="hasRole('ROLE_ADMIN')"> -->
-<div class="container">
-<p>
+<div class="container" sec:authorize="hasRole('ROLE_ADMIN')">
+
+ <!-- Include _menu.html -->
+      <th:block th:include="/_menu"></th:block>
+	<div class="container">
+		<p>
 			Welcome Administrator(<span sec:authentication="principal.username">Admin</span>)
 		</p>
 		<p sec:authorize="isAuthenticated()">
