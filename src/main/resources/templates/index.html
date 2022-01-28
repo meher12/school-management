@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<!-- <div sec:authorize="hasRole('ROLE_ADMIN')"> -->
+<div class="container">
+<p>
+			Welcome Administrator(<span sec:authentication="principal.username">Admin</span>)
+		</p>
+		<p sec:authorize="isAuthenticated()">
+			<a th:href="@{/logout}">Logout</a>
+		</p>
+	</div>
+	<h1>This is admin home page</h1>
+<!-- 	<span sec:authentication="principal.authorities">-----Print Role--------</span> -->
+<a th:href="@{/indexTeacher}"> List Teacher</a>
+<br>
+</br>
+<a th:href="@{/indexStudent}"> List Student</a>
+</div>
+</body>
+</html>

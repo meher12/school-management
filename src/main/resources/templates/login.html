@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<title>Login in</title>
+</head>
+<body>
+
+	<h1>Welcome to Spring Boot Security</h1>
+	<div layout:fragment="content">
+		<div class="panel col-md-5">
+			<div class="panel panel-primary">
+				<div class="panel-heading">Login Form</div>
+				<div class="panel-body">
+					<center>
+						<h1>Welcome to Spring Boot Security</h1>
+
+						<form method="POST" th:action="@{/login}">
+							User Name : <input type="text" name="username" value="user" /><br>
+							<br> Password : <input type="password" name="password"
+								value="password" /><br>
+							<br> <input type="submit" name="submit" />
+							
+							<div class="form-group">
+							<label> <input type="checkbox" name="remember-me">
+								Remember Me
+							</label>
+						</div>
+						</form>
+					</center>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
