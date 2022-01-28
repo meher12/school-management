@@ -30,5 +30,6 @@ School Management Project: Spring Boot + Spring Data JPA ( Hibernate)+ Spring Se
 # teacher@gmail.com/teacher
 # student@gmail.com/student
 
-###### SQL File:  data.sql
+## SQL File:  
+    -  data.sql
 
