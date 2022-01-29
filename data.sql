@@ -15,8 +15,7 @@ delete from  users;
 INSERT INTO roles (id, name) VALUES 
 (1, 'ROLE_ADMIN'),
 (2, 'ROLE_ACTUATOR'),
-(3, 'ROLE_USER')
-;
+(3, 'ROLE_USER');
 
 INSERT INTO users (id, email, first_name, password) VALUES 
 (1, 'admin@gmail.com', 'Admin', '$2a$10$hKDVYxLefVHV/vtuPhWD3OigtRyOykRLDdUAp80Z1crSoS1lFqaFS'),
